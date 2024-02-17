@@ -5,6 +5,10 @@
   overflow-x: hidden;
 }
 
+hr {
+  margin: 8em 18em;
+}
+
 .wrapper {
   margin: 2em;
   display: flex;
@@ -33,12 +37,19 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+header div {
+  width: 50%;
+}
+header div .logo {
+  width: 25%;
+}
 header menu {
   width: 50%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   font-family: Montserrat;
+  font-size: calc(var(--index) * 0.6);
   gap: 20px;
 }
 header menu a {
@@ -51,15 +62,26 @@ header menu a:hover {
 }
 
 .hero {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url(./img/main-pic.png) no-repeat;
   color: white;
   font-family: Montserrat;
 }
+.hero__start--img {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  height: 700px;
+  background: url(./img/main-pic.png) no-repeat center;
+  background-size: cover;
+  z-index: -1;
+}
 .hero__text {
   margin-top: 3em;
+  font-size: calc(var(--index) * 0.5);
 }
 .hero__title {
   font-family: Poppins;
@@ -76,7 +98,7 @@ header menu a:hover {
   width: 100%;
   height: 640px;
   background: url(./img/main-pic-phones.png) no-repeat;
-  background-position: 43%;
+  background-position: 47%;
 }
 
 .app {
@@ -114,6 +136,7 @@ header menu a:hover {
 .app__ar__descr h4 {
   color: #737373;
   font-weight: 500;
+  font-size: calc(var(--index) * 0.6);
 }
 .app__ar__descr--left {
   padding-left: 10em;
@@ -128,6 +151,7 @@ header menu a:hover {
   height: 30em;
   color: white;
   background: url(./img/desktop\ Hero\ Light\ 8.png) no-repeat;
+  background-size: cover;
 }
 .advertisement h2 {
   font-size: calc(var(--index) * 1.25);
